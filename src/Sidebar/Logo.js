@@ -6,11 +6,18 @@ export const Logo = () => {
   return (
     <>
       <NasaLogo src={logo} />
-      <p>ASTRONOMY PHOTO OF THE DAY</p>
+      <SubText>Astronomy Photo Of The Day</SubText>
     </>
   );
 };
 
 const NasaLogo = styled.img`
+  margin-top: 20px;
   width: 50%;
+`;
+
+const SubText = styled.h4`
+  max-width: 50%;
+  margin: 0 auto;
+  color: white;
 `;

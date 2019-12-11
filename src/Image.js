@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 export const Image = ({ image: { url, title } }) => {
-  //   return <MainImage src={url} alt={title}></MainImage>;
   return (
     <ImageContainer>
-      <MainImage
+      <MainImage src={url} alt={title}></MainImage>
+      {/* <MainImage
         src={
           "https://apod.nasa.gov/apod/image/1912/N63A_HubbleChandraSchmidt_960.jpg"
         }
         alt={title}
-      ></MainImage>
+      ></MainImage> */}
     </ImageContainer>
   );
 };

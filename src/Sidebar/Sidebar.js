@@ -12,5 +12,5 @@ const Container = styled.div`
   z-index: 1;
   width: 300px;
   height: 100vh;
-  background-color: grey;
+  background-color: #1c1c1c;
 `;
