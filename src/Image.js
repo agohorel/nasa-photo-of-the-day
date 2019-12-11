@@ -2,12 +2,27 @@ import React from "react";
 import styled from "styled-components";
 
 export const Image = ({ image: { url, title } }) => {
-  return <MainImage src={url} alt={title}></MainImage>;
+  //   return <MainImage src={url} alt={title}></MainImage>;
+  return (
+    <ImageContainer>
+      <MainImage
+        src={
+          "https://apod.nasa.gov/apod/image/1912/N63A_HubbleChandraSchmidt_960.jpg"
+        }
+        alt={title}
+      ></MainImage>
+    </ImageContainer>
+  );
 };
 
-const MainImage = styled.img`
-  width: calc(100% - 20vw);
+const ImageContainer = styled.div`
+  width: calc(100% - 300px);
   height: 100vh;
-  margin-left: 20vw;
-  background-color: #3c3c3c;
+  margin-left: 300px;
+`;
+
+const MainImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
