@@ -13,4 +13,5 @@ const Container = styled.div`
   width: 300px;
   height: 100vh;
   background-color: #1c1c1c;
+  box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.5);
 `;
