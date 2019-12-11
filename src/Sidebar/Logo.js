@@ -12,8 +12,8 @@ export const Logo = () => {
 };
 
 const NasaLogo = styled.img`
-  margin-top: 20px;
-  width: 50%;
+  margin-top: 25px;
+  width: 67%;
 `;
 
 const SubText = styled.h4`
