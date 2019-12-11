@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const DatePicker = () => {
   const date = new Date();
   const yyyy = date.getFullYear();
-  const mm = date.getMonth() + 1; // january = 0!
-  const dd = date.getDate();
+  let mm = date.getMonth() + 1; // january = 0!
+  let dd = date.getDate();
 
   // format single digit days/months correctly
   if (dd < 10) {
@@ -20,7 +20,7 @@ export const DatePicker = () => {
 
   return (
     <PickerContainer>
-      <label for="picker">Select an image from another date:</label>
+      <label htmlFor="picker">Select an image from another date:</label>
       <input
         type="date"
         id="picker"
