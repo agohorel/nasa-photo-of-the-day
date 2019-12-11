@@ -6,8 +6,11 @@ export const Sidebar = props => {
 };
 
 const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 20vw;
-  min-width: 300px;
   height: 100vh;
   background-color: grey;
 `;

@@ -10,13 +10,13 @@ import { Image } from "./Image";
 function App() {
   const [image, setImage] = useState({});
 
-  useEffect(() => {
-    axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-      // .then(res => console.log(res))
-      .then(res => setImage(res.data))
-      .catch(err => console.error(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+  //     // .then(res => console.log(res))
+  //     .then(res => setImage(res.data))
+  //     .catch(err => console.error(err));
+  // }, []);
 
   return (
     <div className="App">
