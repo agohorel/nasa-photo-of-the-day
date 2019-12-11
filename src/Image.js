@@ -6,14 +6,14 @@ import { Loader } from "./Loader";
 export const Image = ({ image: { url, title } }) => {
   return (
     <ImageContainer>
-      {/* {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />} */}
+      {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />}
 
-      <MainImage
+      {/* <MainImage
         src={
           "https://apod.nasa.gov/apod/image/1912/N63A_HubbleChandraSchmidt_960.jpg"
         }
         alt={title}
-      ></MainImage>
+      ></MainImage> */}
     </ImageContainer>
   );
 };
