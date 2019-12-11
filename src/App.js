@@ -6,22 +6,23 @@ import { Sidebar } from "./Sidebar/Sidebar";
 import { Logo } from "./Sidebar/Logo";
 import { Description } from "./Sidebar/Description";
 import { Image } from "./Image";
+import { DatePicker } from "./Sidebar/DatePicker";
 
 function App() {
   const [image, setImage] = useState({});
 
-  useEffect(() => {
-    axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-      // .then(res => console.log(res))
-      .then(res => setImage(res.data))
-      .catch(err => console.error(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+  //     .then(res => setImage(res.data))
+  //     .catch(err => console.error(err));
+  // }, []);
 
   return (
     <div className="App">
       <Sidebar>
         <Logo></Logo>
+        <DatePicker></DatePicker>
         <Description description={image}></Description>
       </Sidebar>
       <Image image={image}></Image>
