@@ -8,14 +8,14 @@ import measurements from "./measurements";
 export const Image = ({ image: { url, title } }) => {
   return (
     <ImageContainer>
-      {/* {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />} */}
+      {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />}
 
-      <MainImage
+      {/* <MainImage
         src={
           "https://images.unsplash.com/photo-1487235829740-e0ac5a286e1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1348&q=80"
         }
         alt={title}
-      ></MainImage>
+      ></MainImage> */}
     </ImageContainer>
   );
 };

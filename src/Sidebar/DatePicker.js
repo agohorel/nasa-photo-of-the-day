@@ -18,7 +18,7 @@ export const DatePicker = ({ setDate }) => {
         min="1995-06-16"
         max={todayFormatted}
       ></input>
-      <Button onClick={() => setDate(document.querySelector("input").value)}>
+      <Button onClick={e => setDate(e.target.previousSibling.value)}>
         View
       </Button>
     </PickerContainer>
