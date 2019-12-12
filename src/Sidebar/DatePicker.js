@@ -57,6 +57,18 @@ const PickerContainer = styled.div`
 
   @media (max-width: ${breakpoints.cutoff}) {
     margin: 0 auto;
+    padding-top: 4.1rem;
+
+    input {
+      width: 50%;
+      display: block;
+      margin: 0.5rem auto;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
   }
 `;
 
