@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import colors from "../colors";
+import breakpoints from "../breakpoints";
 import { dateToday } from "../utils";
 
 export const DatePicker = ({ setDate }) => {
@@ -52,6 +53,10 @@ const PickerContainer = styled.div`
     &::-webkit-datetime-edit-text {
       padding: 0 1px;
     }
+  }
+
+  @media (max-width: ${breakpoints.cutoff}) {
+    margin: 0 auto;
   }
 `;
 

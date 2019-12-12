@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import { Loader } from "./Loader";
+import breakpoints from "./breakpoints";
+import measurements from "./measurements";
 
 export const Image = ({ image: { url, title } }) => {
   return (
@@ -21,11 +23,17 @@ export const Image = ({ image: { url, title } }) => {
 const ImageContainer = styled.div`
   width: calc(100% - 300px);
   height: 100vh;
-  margin-left: 300px;
+  margin-left: ${measurements.sidebarWidth};
   background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: ${breakpoints.cutoff}) {
+    width: 100%;
+    height: 100vh;
+    margin-left: 0;
+  }
 `;
 
 const MainImage = styled.img`
