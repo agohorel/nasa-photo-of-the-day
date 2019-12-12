@@ -35,6 +35,23 @@ const PickerContainer = styled.div`
   input {
     width: 90%;
     margin-top: 10px;
+    border: none;
+    background-color: ${colors.midgrey};
+    color: ${colors.white};
+    font-family: "Roboto", sans-serif;
+    padding: 2px;
+
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &::-webkit-calendar-picker-indicator:hover {
+      background: black;
+    }
+
+    &::-webkit-datetime-edit-text {
+      padding: 0 1px;
+    }
   }
 `;
 
