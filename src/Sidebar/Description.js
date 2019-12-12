@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import colors from "../colors";
+import breakpoints from "../breakpoints";
 
 export const Description = ({ description: { explanation } }) => {
   return (
@@ -17,6 +18,10 @@ const Container = styled.div`
   position: absolute;
   bottom: 0;
   padding: 10px;
+
+  @media (max-width: ${breakpoints.cutoff}){
+    display: none;
+  }
 `;
 const Heading = styled.h3`
   color: ${colors.white};

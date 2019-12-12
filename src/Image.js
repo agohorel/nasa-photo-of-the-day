@@ -8,20 +8,20 @@ import measurements from "./measurements";
 export const Image = ({ image: { url, title } }) => {
   return (
     <ImageContainer>
-      {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />}
+      {/* {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />} */}
 
-      {/* <MainImage
+      <MainImage
         src={
-          "https://apod.nasa.gov/apod/image/1912/N63A_HubbleChandraSchmidt_960.jpg"
+          "https://images.unsplash.com/photo-1487235829740-e0ac5a286e1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1348&q=80"
         }
         alt={title}
-      ></MainImage> */}
+      ></MainImage>
     </ImageContainer>
   );
 };
 
 const ImageContainer = styled.div`
-  width: calc(100% - 300px);
+  width: calc(100% - ${measurements.sidebarWidth});
   height: 100vh;
   margin-left: ${measurements.sidebarWidth};
   background-color: #000;
@@ -31,8 +31,9 @@ const ImageContainer = styled.div`
 
   @media (max-width: ${breakpoints.cutoff}) {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - ${measurements.navHeight});
     margin-left: 0;
+    display: block;
   }
 `;
 
