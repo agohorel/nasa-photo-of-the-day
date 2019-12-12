@@ -1,22 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export const DatePicker = () => {
-  const date = new Date();
-  const yyyy = date.getFullYear();
-  let mm = date.getMonth() + 1; // january = 0!
-  let dd = date.getDate();
+import { dateToday } from "../utils";
 
-  // format single digit days/months correctly
-  if (dd < 10) {
-    dd = `0${dd}`;
-  }
-
-  if (mm < 10) {
-    mm = `0${mm}`;
-  }
-
-  const todayFormatted = `${yyyy}-${mm}-${dd}`;
+export const DatePicker = ({ setDate }) => {
+  const todayFormatted = dateToday();
 
   return (
     <PickerContainer>
@@ -28,6 +16,9 @@ export const DatePicker = () => {
         min="1995-06-16"
         max={todayFormatted}
       ></input>
+      <Button onClick={() => setDate(document.querySelector("input").value)}>
+        View
+      </Button>
     </PickerContainer>
   );
 };
@@ -43,5 +34,21 @@ const PickerContainer = styled.div`
   input {
     width: 90%;
     margin-top: 10px;
+  }
+`;
+
+const Button = styled.button`
+  background-color: #3c3c3c;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.2s ease-out all;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #aaa;
+    color: black;
   }
 `;
