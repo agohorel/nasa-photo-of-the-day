@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import colors from "../colors";
 import { dateToday } from "../utils";
 
 export const DatePicker = ({ setDate }) => {
@@ -38,8 +39,8 @@ const PickerContainer = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: #3c3c3c;
-  color: white;
+  background-color: ${colors.midgrey};
+  color: ${colors.white};
   border: none;
   margin-top: 1rem;
   padding: 10px 20px;
@@ -48,7 +49,7 @@ const Button = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: #aaa;
-    color: black;
+    background-color: ${colors.lightgrey};
+    color: ${colors.black};
   }
 `;

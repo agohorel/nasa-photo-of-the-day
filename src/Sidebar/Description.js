@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import colors from "../colors";
+
 export const Description = ({ description: { explanation } }) => {
   return (
     <Container>
@@ -17,11 +19,11 @@ const Container = styled.div`
   padding: 10px;
 `;
 const Heading = styled.h3`
-  color: white;
+  color: ${colors.white};
   text-align: left;
 `;
 
 const Content = styled.p`
   text-align: left;
-  color: #aaa;
+  color: ${colors.lightgrey};
 `;

@@ -14,14 +14,14 @@ function App() {
   const [image, setImage] = useState({});
   const [date, setDate] = useState(dateToday());
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=true&date=${date}`
-      )
-      .then(res => setImage(res.data))
-      .catch(err => console.error(err));
-  }, [date]);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=true&date=${date}`
+  //     )
+  //     .then(res => setImage(res.data))
+  //     .catch(err => console.error(err));
+  // }, [date]);
 
   return (
     <div className="App">
