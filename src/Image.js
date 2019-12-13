@@ -5,19 +5,28 @@ import { Loader } from "./Loader";
 import breakpoints from "./breakpoints";
 import measurements from "./measurements";
 
-export const Image = ({ image: { url, title } }) => {
-  return (
-    <ImageContainer>
-      {url ? <MainImage src={url} alt={title}></MainImage> : <Loader />}
-
-      {/* <MainImage
-        src={
-          "https://images.unsplash.com/photo-1487235829740-e0ac5a286e1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1348&q=80"
-        }
-        alt={title}
-      ></MainImage> */}
-    </ImageContainer>
-  );
+export const Image = ({ image: { hdurl, url, title, media_type } }) => {
+  if (url) {
+    if (media_type === "image") {
+      return (
+        <ImageContainer>
+          <MainImage src={hdurl} alt={title}></MainImage>
+        </ImageContainer>
+      );
+    } else {
+      return (
+        <ImageContainer>
+          <MainVideo src={url}></MainVideo>
+        </ImageContainer>
+      );
+    }
+  } else {
+    return (
+      <ImageContainer>
+        <Loader></Loader>
+      </ImageContainer>
+    );
+  }
 };
 
 const ImageContainer = styled.div`
@@ -41,4 +50,14 @@ const MainImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+const MainVideo = styled.iframe`
+  width: 100%;
+  height: 100vh;
+  border: none;
+
+  @media (max-width: ${breakpoints.cutoff}) {
+    min-height: 500px;
+  }
 `;
